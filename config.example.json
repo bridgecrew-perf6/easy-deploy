@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Front-end",
+        "screenName": "frontend",
+        "server": {
+            "address": "135.125.132.100",
+            "user": "root",
+            "password": "Kiryzoka2012"
+        },
+        "files": [
+            {
+                "source": "upload/frontend/",
+                "target": "/srv/frontend/",
+                "clean": true
+            }
+        ],
+        "commands": [
+            "screen -X -S frontend quit",
+            "cd /srv/frontend && npm i express cors && screen -dmS frontend node capp.js"
+        ]
+    },
+    {
+        "name": "Europe Game Server (Destuch, Frankfurt)",
+        "screenName": "server",
+        "server": {
+            "address": "51.38.127.102",
+            "user": "root",
+            "password": "Kiryzoka2012"
+        },
+        "files": [
+            {
+                "source": "upload/server/",
+                "target": "/srv/server/",
+                "clean": true
+            }
+        ],
+        "commands": [
+            "screen -X -S server quit",
+            "cd /srv/server && npm i express cors ws log4js chalk quad-node msgpack-lite @discordjs/collection axios && screen -dmS server node src/app.js"
+        ]
+    },
+    {
+        "name": "AU Game Server (Australia, Syndey)",
+        "screenName": "server",
+        "server": {
+            "address": "139.99.170.16",
+            "user": "root",
+            "password": "Kiryzoka2012"
+        },
+        "files": [
+            {
+                "source": "upload/server/",
+                "target": "/srv/server/",
+                "clean": true
+            }
+        ],
+        "commands": [
+            "screen -X -S server quit",
+            "cd /srv/server && npm i express cors ws log4js chalk quad-node msgpack-lite @discordjs/collection axios && screen -dmS server node src/app.js"
+        ]
+    }
+]
